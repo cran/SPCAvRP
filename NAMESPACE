@@ -1,0 +1,4 @@
+export(SPCAvRP, SPCAvRP_parallel, SPCAvRP_ranking, select_projection, project_covariance, final_estimator)
+import(MASS)
+import(parallel)
+

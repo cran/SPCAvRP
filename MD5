@@ -1,0 +1,14 @@
+e8ea772d96df6666a16b08ea4f953a96 *DESCRIPTION
+b371e655c2906888aa1d720c555f50d1 *NAMESPACE
+581892c3a5446be5de82198916913bb4 *R/SPCAvRP.R
+e0268bce008a527eebf94b78392481e8 *R/SPCAvRP_parallel.R
+a63a1c32cb4db22aaf88daeea3166293 *R/SPCAvRP_ranking.R
+2e54041701360956a47301a0a2328355 *R/final_estimator.R
+e9195a51895320cacac2ba8ce10c71cc *R/project_covariance.R
+649ee235aa648fb54392c265a326b7c8 *R/select_projection.R
+e98af37bf1c2b300db4ac1abe73adb4b *man/SPCAvRP.Rd
+5c0861703e02c42c450c1e2814c0ccda *man/SPCAvRP_parallel.Rd
+7cbbc6a382b0872be3e6acac735e32f7 *man/SPCAvRP_ranking.Rd
+34e168f9bcff9ff5cafcbee35709193e *man/final_estimator.Rd
+5848b73f405348b8a4aa79fffa88b2ee *man/project_covariance.Rd
+f4a3e7511bcd8d740084b1d3a045dc1b *man/select_projection.Rd
