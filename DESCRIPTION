@@ -2,8 +2,8 @@ Package: SPCAvRP
 Type: Package
 Title: Sparse Principal Component Analysis via Random Projections
         (SPCAvRP)
-Version: 0.1
-Date: 2017-12-19
+Version: 0.2
+Date: 2018-01-16
 Author: Milana Gataric, Tengyao Wang and Richard J. Samworth
 Maintainer: Milana Gataric <m.gataric@statslab.cam.ac.uk>
 Description: Implements the SPCAvRP algorithm, developed and analysed in "Sparse principal component analysis via random projections" Gataric, M., Wang, T. and Samworth, R. J. (2017) <arXiv:1712.05630>. The algorithm is based on the aggregation of eigenvector information from carefully-selected random projections of the sample covariance matrix.
@@ -12,6 +12,6 @@ License: GPL-3
 URL: https://arxiv.org/abs/1712.05630
 NeedsCompilation: no
 Repository: CRAN
-Packaged: 2017-12-19 20:03:26 UTC; mg617
+Packaged: 2018-01-16 12:46:25 UTC; mg617
 RoxygenNote: 6.0.1
-Date/Publication: 2017-12-20 10:51:07 UTC
+Date/Publication: 2018-01-16 12:51:09 UTC

@@ -8,7 +8,6 @@ SPCAvRP <- function( data               # either data matrix or sample covarianc
                    , datascaling = TRUE # TRUE if function scale() should be applied to the data matrix with its arguments center and scale 
                    , center = TRUE      # cf. arguments of function scale()
                    , scale = TRUE       # cf. arguments of function scale()
-                        
 )
   # output : a list of two elements
   #             output$vector : a vector / matrix with its columns as estimated eigenvectors of sparsity level l 
