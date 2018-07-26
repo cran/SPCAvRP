@@ -5,9 +5,7 @@ SPCAvRP_parallel <- function(  data                         # either data matrix
                              , d = 10                       # dimension of the random projections (if k is known, use d = k)
                              , A = 300                      # number of groups of projections
                              , B = 100                      # number of projections in a group
-                             , datascaling = TRUE           # TRUE if function scale() should be applied to the data matrix with its arguments center and scale 
-                             , center = TRUE                # cf. arguments of function scale()
-                             , scale = TRUE                 # cf. arguments of function scale()
+                             , center_data = TRUE           # TRUE if the data matrix should be centered 
                              , cluster_type = "PSOCK"       # can be "PSOCK" or "FORK" (cf. package "parallel")
                              , cores =  1
                              , machine_names = NULL         #names of computers on network to form cluster
@@ -16,8 +14,8 @@ SPCAvRP_parallel <- function(  data                         # either data matrix
   #             output$vector : a vector / matrix with its columns as estimated eigenvectors of different sparsity level l
   #             output$value  : an array of lenght(l) with estimated eigenvalues
 {
-  if( !cov & datascaling ){
-    data <- scale(data, center, scale)
+  if( !cov & center_data ){
+    data <- scale(data, center_data, FALSE)
   }
   if(cluster_type == "FORK"){
     cluster = makeCluster(cores, type="FORK")

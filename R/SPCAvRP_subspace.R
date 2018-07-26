@@ -5,16 +5,14 @@ SPCAvRP_subspace <- function( data               # either the data matrix or the
                             , d = 10             # dimension of the random projections, must be >= s (if k is known, use d = k)
                             , A = 300            # number of projections to aggregate 
                             , B = 100            # number of projections in a group from which to select
-                            , datascaling = TRUE # TRUE if function scale() should be applied to the data matrix with its arguments center and scale 
-                            , center = TRUE      # cf. arguments of function scale()
-                            , scale = TRUE       # cf. arguments of function scale()
+                            , center_data = TRUE # TRUE if the data matrix should be centered 
 )
   # output : a list of two elements
   #             output$vector : a matrix of dimension pxs with its columns as estimated eigenvectors of sparsity level l 
   #             output$value  : an array of dimension s with estimated eigenvalues
 {
-  if( !cov & datascaling ){
-    data <- scale(data, center, scale)
+  if( !cov & center_data ){
+    data <- scale(data, center_data, FALSE)
   }
   p <- ncol(data)
   p_cond <- (p <= 2*d*sqrt(A*B))

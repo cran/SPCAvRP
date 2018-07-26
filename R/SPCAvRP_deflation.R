@@ -5,16 +5,14 @@ SPCAvRP_deflation <- function( data               # either the data matrix or th
                              , d = 10             # dimension of the random projections (if k is known, use d = k)
                              , A = 300            # number of projections to aggregate 
                              , B = 100            # number of projections in a group
-                             , datascaling = TRUE # TRUE if function scale() should be applied to the data matrix with its arguments center and scale 
-                             , center = TRUE      # cf. arguments of function scale()
-                             , scale = TRUE       # cf. arguments of function scale()
+                             , center_data = TRUE # TRUE if the data matrix should be centered 
 )
   # output : a list of two elements
   #             output$vector : a matrix of dimension pxs with its columns as estimated eigenvectors of sparsity level l 
   #             output$value  : an array of dimesnin s with estimated eigenvalues
 {
-  if( !cov & datascaling ){
-    data <- scale(data, center, scale)
+  if( !cov & center_data ){
+    data <- scale(data, center_data, FALSE)
   }
   p <- ncol(data)
   p_cond <- (p <= 2*d*sqrt(A*B))
@@ -28,7 +26,7 @@ SPCAvRP_deflation <- function( data               # either the data matrix or th
   lambda_hat <- rep(0,s)
   v_hat <- matrix(rep(0,s*p), nrow = p)
   v_hat_supp <- NULL
-  spca_1 <- SPCAvRP(data, cov, l[1], d, A, B, datascaling = FALSE) # can be any SPCA algorithm
+  spca_1 <- SPCAvRP(data, cov, l[1], d, A, B, center_data = FALSE) # can be any SPCA algorithm
   v_hat[,1] <- spca_1$vector
   lambda_hat[1] <- spca_1$value
   if(s>1){
@@ -41,7 +39,7 @@ SPCAvRP_deflation <- function( data               # either the data matrix or th
       }else{
         Hdata[,v_hat_supp[[i-1]]] <- Hdata[,v_hat_supp[[i-1]]]%*%H
       }
-      spca_i <- SPCAvRP(Hdata, cov, l[i], d, A, B, datascaling = FALSE) # can be any SPCA algorithm
+      spca_i <- SPCAvRP(Hdata, cov, l[i], d, A, B, center_data = FALSE) # can be any SPCA algorithm
       v_hat_supp[[i]] <- which(spca_i$vector!=0, arr.ind = T) 
       V <- NULL
       for(j in seq(i-1,1,-1)){

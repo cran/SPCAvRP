@@ -14,7 +14,7 @@
 \item{vector}{A vector or a matrix with \code{length(l)} columns as the estimated eigenvectors of sparsity level \code{l}.}
 \item{value}{An array with \code{length(l)} estimated eigenvalues.}
 }
-\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2017) Sparse principal component analysis via random projections
+\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2018) Sparse principal component analysis via random projections
 \url{https://arxiv.org/abs/1712.05630}}
 \author{Milana Gataric, Tengyao Wang and Richard J. Samworth}
 \examples{

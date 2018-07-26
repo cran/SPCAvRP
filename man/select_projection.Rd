@@ -16,7 +16,7 @@ select_projection(data, cov = TRUE, p, d, B)
 }
 \details{If \code{p} is very large, it might be faster if the data matrix is provided as the input.}
 \value{Returns eigenvector \code{v_hat_star} corresponding to the projected covariance yielding the largest eigenvalue among \code{B} different \code{d}-dimensional axis-aligned random projections.}
-\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2017) Sparse principal component analysis via random projections
+\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2018) Sparse principal component analysis via random projections
 \url{https://arxiv.org/abs/1712.05630}}
 \author{Milana Gataric, Tengyao Wang and Richard J. Samworth}
 \examples{

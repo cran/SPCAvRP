@@ -11,6 +11,6 @@
   \item{A}{The number of projections to select.}
 }
 \value{Returns matrix \code{v_hat_stars} with \code{A} columns that correspond to \code{s} eigenvectors yielding the largest eigenvalues.}
-\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2017) Sparse principal component analysis via random projections
+\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2018) Sparse principal component analysis via random projections
   \url{https://arxiv.org/abs/1712.05630}}
 \author{Milana Gataric, Tengyao Wang and Richard J. Samworth}

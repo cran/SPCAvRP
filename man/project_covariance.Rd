@@ -14,7 +14,7 @@
 ...
 \item{projections[[nrow(rand_ind)]]}{projected sample covariance along indices of \code{rand_ind[nrow(rand_ind),]}}
 }
-\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2017) Sparse principal component analysis via random projections
+\references{Milana Gataric, Tengyao Wang and Richard J. Samworth (2018) Sparse principal component analysis via random projections
 \url{https://arxiv.org/abs/1712.05630}}
 \author{Milana Gataric, Tengyao Wang and Richard J. Samworth}
 \examples{
