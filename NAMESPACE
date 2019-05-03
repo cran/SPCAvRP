@@ -1,4 +1,4 @@
-export(SPCAvRP, SPCAvRP_parallel, SPCAvRP_ranking, select_projection, project_covariance, final_estimator, SPCAvRP_subspace, SPCAvRP_deflation, select_projections_subspace)
+export(SPCAvRP, SPCAvRP_subspace, SPCAvRP_deflation)
 import(MASS)
 import(parallel)
 importFrom("utils", "head")
